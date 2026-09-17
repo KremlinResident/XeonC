@@ -1,0 +1,9 @@
+{
+    "makefile.launchConfigurations": [
+        {
+            "cwd": "/home/plato/projects/XeonC",
+            "binaryPath": "/home/plato/projects/XeonC/XeonC",
+            "binaryArgs": []
+        }
+    ]
+}

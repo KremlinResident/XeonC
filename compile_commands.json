@@ -1,0 +1,27 @@
+[
+  {
+    "arguments": [
+      "/usr/bin/clang",
+      "-c",
+      "-g",
+      "-std=c17",
+      "-D_POSIX_C_SOURCE=200809L",
+      "-fsanitize=address,leak,undefined",
+      "-fno-omit-frame-pointer",
+      "-Weverything",
+      "-Werror",
+      "-Wno-c++-compat",
+      "-Wno-c99-compat",
+      "-Wno-pessimizing-move",
+      "-Wno-declaration-after-statement",
+      "-I./src/",
+      "-O0",
+      "-o",
+      "build/main.o",
+      "src/main.c"
+    ],
+    "directory": "/home/plato/projects/XeonC",
+    "file": "/home/plato/projects/XeonC/src/main.c",
+    "output": "/home/plato/projects/XeonC/build/main.o"
+  }
+]
