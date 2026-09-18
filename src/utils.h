@@ -34,6 +34,7 @@ extern enum XeonC_errno_vals XeonC_errno;
 // of the buffer (not including null terminator).
 // this utility function is macro'd, use read_file for proper debug handling of
 // FILE_NAME and LINE
+// the read is atomic, it's all or nothing, fread(str, *out_size, 1, fd);
 static char *xeoncimpl_read_file(const char *path, size_t *out_size,
                                  const char *FILE_NAME, int LINE);
 #define read_file(path, out_size)                                              \
@@ -42,6 +43,8 @@ static char *xeoncimpl_read_file(const char *path, size_t *out_size,
 // returns 0 on success. returns -1 on failure
 // this utility function is macro'd, use write_file for proper debug handling of
 // FILE_NAME and LINE
+// the write is non-atomic, it's a looping write and may improperly write
+// uses fwrite(str, sizeof(*str), size, fd);
 static int xeoncimpl_write_file(const char *path, const char *data, size_t size,
                                 const char *FILE_NAME, int LINE);
 #define write_file(path, data, size)                                           \
