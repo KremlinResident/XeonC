@@ -11,7 +11,7 @@
       "-Weverything",
       "-Werror",
       "-Wno-c++-compat",
-      "-Wno-c99-compat",
+      "-Wno-pre-c11-compat",
       "-Wno-pessimizing-move",
       "-Wno-declaration-after-statement",
       "-I./src/",

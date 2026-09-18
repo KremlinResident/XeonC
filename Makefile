@@ -1,6 +1,6 @@
 CC = clang
 CFLAGS = -std=c17 -D_POSIX_C_SOURCE=200809L -fsanitize=address,leak,undefined -fno-omit-frame-pointer \
-	-Weverything -Werror -Wno-c++-compat -Wno-c99-compat -Wno-pessimizing-move -Wno-declaration-after-statement
+	-Weverything -Werror -Wno-c++-compat -Wno-pre-c11-compat -Wno-pessimizing-move -Wno-declaration-after-statement
 INCL = ./src/
 SRC = $(wildcard ./src/*.c)
 OBJS = $(patsubst ./src/%.c, ./build/%.o, $(SRC))
